@@ -5,5 +5,7 @@ export default Component.extend({
 
   classNames:['movie-list'],
 
-  movies: null
+  movies: null,
+  sortProperties: ['title:asc'],
+  sortedMovies: Ember.computed.sort('movies', 'sortProperties')
 });
