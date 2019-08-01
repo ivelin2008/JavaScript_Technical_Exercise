@@ -1,6 +1,16 @@
-{{#each sortedMovies as |movie|}}
-  {{movie-list/movie-list-item
-    movie=movie
-  }}
-  <hr />
-{{/each}}
+<button {{action "toggleSorting"}} class="btn">Sort By {{#if this.isSortedByRating}}Title{{else}}Rating{{/if}}</button>
+{{#if this.isSortedByRating}}
+    {{#each sortedMoviesByRating as |movie|}}
+      {{movie-list/movie-list-item
+        movie=movie
+      }}
+      <hr />
+    {{/each}}
+  {{else}}
+    {{#each sortedMoviesByTitle as |movie|}}
+      {{movie-list/movie-list-item
+        movie=movie
+      }}
+      <hr />
+    {{/each}}
+{{/if}}

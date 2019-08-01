@@ -6,4 +6,13 @@
 
 {{input value=image placeholder='Image url..' required=true class='form-image-url'}}
 
+<div class="ratingField">
+    <label>Rating:</label>
+    <select id="ratingSelectBox" onchange={{action (mut selectedRating) value='target.value'}}>
+    {{#each options as |option|}}
+        <option value={{option}}>{{option}}</option>
+    {{/each}}
+    </select>
+</div>
+
 <button type="submit">Add Movie</button>

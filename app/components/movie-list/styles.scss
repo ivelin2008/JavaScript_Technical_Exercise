@@ -18,4 +18,17 @@
       display: none;
     }
   }
+  .btn {
+    background-color: #008CBA;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 11px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 }
