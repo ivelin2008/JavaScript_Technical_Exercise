@@ -1,7 +1,8 @@
 &.movie-list {
   height: 50rem;
   overflow-y: auto;
-
+  padding-inline-start: 10px;
+  
   list-style: none;
 
   .movie-list-item {
