@@ -4,3 +4,16 @@
     <p>{{movie.description}}</p>
     <p>Rating: {{ movie.rating }}</p>
 </div>
+<button {{action "toggleEditMode"}} class="btn">{{#if this.isEditMode}}Close{{else}}Edit{{/if}}</button>
+<button {{action "deleteMovie" value="movie.id"}} class="btn">Delete</button>
+{{#if this.isEditMode}}
+    {{add-movie-form
+    id=movie.id
+    title=movie.title
+    description=movie.description
+    image=movie.image
+    selectedRating=movie.rating
+    editMode=isEditMode
+    update=update
+    }}
+{{/if}}

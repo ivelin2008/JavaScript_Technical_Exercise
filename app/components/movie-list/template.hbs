@@ -3,6 +3,8 @@
     {{#each sortedMoviesByRating as |movie|}}
       {{movie-list/movie-list-item
         movie=movie
+        update=update
+        delete=delete
       }}
       <hr />
     {{/each}}
@@ -10,6 +12,8 @@
     {{#each sortedMoviesByTitle as |movie|}}
       {{movie-list/movie-list-item
         movie=movie
+        update=update
+        delete=delete
       }}
       <hr />
     {{/each}}
